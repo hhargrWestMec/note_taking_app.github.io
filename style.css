@@ -1,0 +1,269 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #eaf2e3;
+}
+
+@font-face{
+    font-family:'sticky_note';
+    src: url('./Kalam-Regular.ttf');
+}
+
+#main_container {
+    background-color: inherit;
+}
+
+#new_note_button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1em;
+    background-color: #dd5451;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px; 
+    width: 10vw;
+    margin-top: 5vh;
+    margin-left: 85vw;
+}
+
+#new_note_button:hover, #enter_button:hover, #delete_button:hover, #edit_button:hover, #close_button:hover, #close_edit_button:hover, #edit_button_submit:hover{
+    background-color: #ae4341;
+    box-shadow: 2px 2px 2px grey;
+}
+
+#notes_container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+#notes_container li {
+    list-style: none;
+    width: 350px;
+    height: 350px;
+    background-color: #fffd76;
+    box-shadow: 3px 3px 3px grey;
+    transform: rotate(2deg);
+    margin-top: 5vh;
+    transition: 0.25s;
+}
+
+#notes_container li:hover {
+    background-color: #e1df6a;
+    transform: scale(1.1, 1.1);
+
+}
+
+#notes_container li p {
+    font-family: sticky_note;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    height: 250px;
+}
+
+#notes_container li h1 {
+    font-family: sticky_note;
+    padding: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#input_box_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+}
+
+#input_box {
+    margin: auto;    
+    width: 500px;
+    height: 500px;
+    background-color: #fffd76;
+    z-index: 1;
+    box-shadow: 5px 5px 5px grey;
+    transform: rotate(2deg);
+    visibility: hidden;
+}
+
+#close_icon, #close_edit_icon {
+    font-size: 2em;
+    color: #dd5451;
+    margin-left: 3vw;
+}
+
+#close_icon:hover, #close_edit_icon:hover {
+    color: #ae4341;
+}
+
+#title_input {
+    background-color: #fffd76;
+    border: 0px;
+    font-family: sticky_note;
+    font-size: 2em;
+    margin: 20px;
+
+}
+
+#note_input {
+    background-color: #fffd76;
+    border: 0px;
+    font-family: sticky_note;
+    font-size: 1.25em;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 85%;
+    resize: none;
+}
+
+#enter_button, #edit_button_submit {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1em;
+    background-color: #dd5451;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    padding: 15px 40px 15px 40px; 
+    width: fit-content;
+    z-index: 1;
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+#confirm_box_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+}
+
+#confirm_box {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    background-color: #fffd76;
+    z-index: 1;
+    box-shadow: 2px 2px 2px grey;
+    visibility: hidden;
+}
+
+#confirm_box h1 {
+    font-family: sticky_note;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+#button_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#edit_button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1em;
+    background-color: #dd5451;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px; 
+    margin: 15px;
+}
+
+#delete_button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1em;
+    background-color: #dd5451;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px; 
+    margin: auto;
+    margin: 15px;
+}
+
+#close_button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1em;
+    background-color: #dd5451;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px; 
+    margin: auto;
+    margin: 15px;
+}
+
+#edit_box_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+}
+
+#edit_box {
+    margin: auto;    
+    width: 500px;
+    height: 500px;
+    background-color: #fffd76;
+    z-index: 1;
+    box-shadow: 5px 5px 5px grey;
+    transform: rotate(2deg);
+    visibility: hidden;
+}
+
+#title_input_edit {
+    background-color: #fffd76;
+    border: 0px;
+    font-family: sticky_note;
+    font-size: 2em;
+    margin: 20px;
+
+}
+
+#note_input_edit {
+    background-color: #fffd76;
+    border: 0px;
+    font-family: sticky_note;
+    font-size: 1.25em;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 85%;
+    resize: none;
+}
+
+.item_close_button {
+    font-size: 2em;
+    color: #dd5451;
+    margin-top: 2vh;
+    text-align: right; 
+    margin: right;
+    padding: 0px 5px 0px 5px;   
+}
+
+.item_close_button:hover {
+    color: #ae4341;  
+}
+
+.icon_div {
+    width: 95%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    height: 0;
+}

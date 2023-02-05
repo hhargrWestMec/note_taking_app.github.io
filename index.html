@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./icon.jpg">
+
+</head>
+<body>
+    <div id="main_container">
+        <button id="new_note_button"> Add New Note </button>
+
+        <div id="input_box_container">
+
+            <div id="input_box">
+
+                <input type="text" id="title_input" name="title_input" placeholder="Enter title here..." required>
+
+                <ion-icon name="close-circle-outline" id="close_icon"></ion-icon>
+
+                <br>
+
+                <textarea id="note_input" name="note_input" placeholder="Enter note here..."  rows="10" required></textarea>
+
+                <button id="enter_button"> Create Note </button>
+            </div>
+
+        </div>
+
+        <div id="edit_box_container">
+
+            <div id="edit_box">
+
+                <input type="text" id="title_input_edit" name="title_input" placeholder="Enter title here..." required>
+
+                <ion-icon name="close-circle-outline" id="close_edit_icon"></ion-icon>
+
+                <br>
+
+                <textarea id="note_input_edit" name="note_input" placeholder="Enter note here..."  rows="10" required></textarea>
+
+                <button id="edit_button_submit"> Edit Note </button>
+            </div>
+
+        </div>
+        <div id="confirm_box_container">
+
+            <div id="confirm_box">
+            
+                <h1> Note Manager </h1>
+
+                <div id="button_container">
+
+                    <button id="edit_button"> Edit Note </button>
+                    
+                    <button id="delete_button"> Delete Note </button>
+                    
+                    <button id="close_button"> Close Manager </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <ul id="notes_container">
+            
+        </ul>
+
+    </div>
+    <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
